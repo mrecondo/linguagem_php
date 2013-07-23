@@ -27,7 +27,7 @@ function linha($qtde=1,$newline=true) {
 function debug_a($dados) {
 	if (isset($dados)) {
 		$ret = "<pre>";
-		$ret.= print_r($dados);
+		$ret.= print_r($dados,true);
 		$ret.= "</pre>";
 		return $ret;
 	} else {
@@ -51,6 +51,10 @@ function divisao($x,$y) {
 	} else {
 		return $x / $y;
 	}
+}
+
+function valida($campo,$valor,&$msg) {
+	return true;
 }
 
 //echo divisao(10,2);
